@@ -1,0 +1,197 @@
+ body{
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+    
+    background-image: linear-gradient(119deg,#fffcff,#edc0cf)
+}
+:root{
+    --primary-color:red;
+    --primary-color-dark:purple;
+    --secondary-color:rgb(0, 0, 0);
+    --white:white;
+}
+*{
+    color: #ba079c;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    max-width: 1300px;
+    margin:auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.nav{
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+ cursor: pointer;
+    color: black;
+}
+.links{
+    display: flex;
+    align-items: center;
+    gap:2rem
+}
+.links div{
+    font-size: .97rem;
+font-weight: 900;
+color: black;
+cursor: pointer;
+transition: 0.3s;
+}
+.links div:hover{
+    color: purple;
+}
+.links .shopping_cart{
+
+    height: 50px;
+    width:50px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    font-size:1.2rem;
+    color: var(--primary-color-dark);
+    background-color: white;
+}
+.link div span{
+    font-size:1.2rem;
+}
+.content{
+    position:relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.image{
+    width:100%;
+    animation: shoe-animation 3s infinite;
+    overflow: hidden;
+}
+.image img{
+    width: 100%;
+    max-width: 800px;
+    height:600px;
+    display: flex;
+    margin: auto;
+    /* transform: rotate(-20deg); */
+}
+ @keyframes shoe-animation{
+    67%{
+    transform: skew(-10deg, 0deg);
+    /* Optionally, scale the heels slightly to adjust their size */
+    transform: scale(1.1);
+}
+} 
+.header{
+    position: absolute;
+top:0.7rem;
+left:10%;
+transform: translateX(-50%);    
+}
+.header h1{
+font-size: 2.5rem;
+
+font-weight: 600;
+}
+.header p{
+    text-align: right;
+    color: #ba079c;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.header p:hover{
+    color: black;
+}
+.featured_item{
+    position: absolute;
+    transform: rotate(-90deg);
+}
+.featured_item h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #ba079c;
+}
+.contact{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    transform: rotate(-90deg);
+}
+.contact span{
+    height: 40px;
+    width:40px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    transform: rotate(90deg);
+}  
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .links div {
+        font-size: 1rem;
+    }
+
+    .links .shopping_cart {
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
+    }
+
+    .header {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact span {
+        height: 30px;
+        width: 30px;
+        font-size: 1rem;
+    }
+}
