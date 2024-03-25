@@ -74,7 +74,7 @@ transition: 0.3s;
 }
 .image{
     width:100%;
-    animation: shoe-animation 3s infinite;
+    animation: heel-animation 3s infinite;
     overflow: hidden;
 }
 .image img{
@@ -85,7 +85,7 @@ transition: 0.3s;
     margin: auto;
     /* transform: rotate(-20deg); */
 }
- @keyframes shoe-animation{
+ @keyframes heel-animation{
     67%{
     transform: skew(-10deg, 0deg);
     /* Optionally, scale the heels slightly to adjust their size */
